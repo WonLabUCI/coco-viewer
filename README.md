@@ -16,9 +16,20 @@ git clone https://github.com/trsvchn/coco-viewer.git
 ## Usage
 
 ```bash
-python cocoviewer.py -h
+Create designated folder (imageDataset)
+Move images and json file to designated subfolders folder (/annotations /images)
+JSON annotation file (instances.json) located in imageDataset/annotations
+Raw image files located in imageDataset/images
 
+To run cocoviewer, navigate to coco-viewer-main folder
+With the above file formatting, run the following code including the path to the designated folder
+python cocoviewer.py -i /pathto/imageDataset/images -a /pathto/imageDataset/annotations/instances.json
+
+To generate instance-wise color masks, hover over the "view" drop down menu, and select "Objects" under coloring.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 usage: cocoviewer.py [-h] [-i PATH] [-a PATH]
+
 
 View images with bboxes from the COCO dataset
 
